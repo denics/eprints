@@ -107,7 +107,7 @@ sub get_state_params
 	{
 		my $internal = $self->get_internal_button;
 		# modifying existing document
-		if( $internal =~ m/^doc(\d+)_(.*)$/ )
+		if( $internal && $internal =~ m/^doc(\d+)_(.*)$/ )
 		{
 			$tounroll->{$1} = 1;
 		}
@@ -167,8 +167,7 @@ sub render_content
 	my( $self, $surround ) = @_;
 	
 	my $session = $self->{session};
-	my $f = $session->make_doc_fragment;
-	
+
 	my @screen_opts = $self->{processor}->list_items( 
 			"upload_methods",
 			params => {

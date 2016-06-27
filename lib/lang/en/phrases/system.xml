@@ -336,6 +336,7 @@ terms.</p>
 
 	<epp:phrase id="document_typename_text">Text</epp:phrase>
 	<epp:phrase id="document_typename_slideshow">Slideshow</epp:phrase>
+	<epp:phrase id="document_typename_spreadsheet">Spreadsheet</epp:phrase>
     <epp:phrase id="document_typename_image">Image</epp:phrase>
     <epp:phrase id="document_typename_audio">Audio</epp:phrase>
     <epp:phrase id="document_typename_video">Video</epp:phrase>
@@ -878,7 +879,7 @@ No reason was given.
 
 <p>Your username is: <b><epc:pin name="username"/></b>.</p>
 
-<p>After you have successfully confirmed your password, you can deposit items <a href="{$config{userhome}}">here</a>.</p>
+<p>After you have successfully confirmed your password, you can deposit items <a href="{$config{base_url}}{$config{userhome}}">here</a>.</p>
 
 <p>Once you have confirmed your identity you may also subscribe to the email alerts service, to be automatically informed of new deposits in the repository in your chosen subject areas in a daily, weekly or monthly digest.</p>
 
@@ -1070,7 +1071,7 @@ Phrases related to the Manage Metadata Fields tool.
 <epp:phrase id="metafield_optdetails_type_subobject">A sub-object container (eprints contain documents).</epp:phrase>
 <epp:phrase id="metafield_fieldopt_type_text">text</epp:phrase>
 <epp:phrase id="metafield_fieldopt_fields_type_text">text</epp:phrase>
-<epp:phrase id="metafield_optdetails_type_text">A free-text field (upto 255 characters).</epp:phrase>
+<epp:phrase id="metafield_optdetails_type_text">A free-text field (up to 255 characters).</epp:phrase>
 <epp:phrase id="metafield_fieldopt_type_time">time</epp:phrase>
 <epp:phrase id="metafield_fieldopt_fields_type_time">time</epp:phrase>
 <epp:phrase id="metafield_optdetails_type_time">A year-month-day hour-minute-second field (YYYY-MM-DD:hh:mm:ss).</epp:phrase>
@@ -1298,7 +1299,7 @@ For more information see <a href="http://eprints.org/d/?keyword=MetaFields">Meta
     <epp:phrase id="page:alert">Alert</epp:phrase>
     <epp:phrase id="page:edit_link">Repository Staff Only: <epc:pin name="link">item control page</epc:pin></epp:phrase>
  
-    <!-- Publisher- or funder-imposed embargos --> 
+    <!-- Publisher- or funder-imposed embargoes -->
     <epp:phrase id="page:embargo_status"><p>These documents will be made publicly accessible from <epc:pin name="date"/>.</p></epp:phrase>
 
     <epp:phrase id="page:item_not_available"> Item not available from this repository.</epp:phrase>
@@ -1323,7 +1324,7 @@ For more information see <a href="http://eprints.org/d/?keyword=MetaFields">Meta
 	
 	<epp:phrase id="Plugin/Screen/Admin/StorageManager:a_local_disk_storage">Local Disk Storage</epp:phrase>
 	<epp:phrase id="Plugin/Screen/Admin/StorageManager:a_local_disk_storage_pic"></epp:phrase>
-	<epp:phrase id="Plugin/Screen/Admin/StorageManager:a_epm_disk_storage">Bazaar Packages</epp:phrase>
+	<epp:phrase id="Plugin/Screen/Admin/StorageManager:a_epm_disk_storage">EPM Disk Storage</epp:phrase>
 	<epp:phrase id="Plugin/Screen/Admin/StorageManager:a_epm_disk_storage_pic"></epp:phrase>
 	<epp:phrase id="Plugin/Screen/Admin/StorageManager:m_local_archival_storage">Archival Storage</epp:phrase>
 	<epp:phrase id="Plugin/Screen/Admin/StorageManager:m_local_archival_storage_pic"></epp:phrase>
@@ -1468,7 +1469,7 @@ For more information see <a href="http://eprints.org/d/?keyword=MetaFields">Meta
     <epp:phrase id="lib/metafield:date_res_month"></epp:phrase>
     <epp:phrase id="lib/metafield:date_res_year"></epp:phrase>
 
-    <!-- phrases used to seperate multiple values in a field -->
+    <!-- phrases used to separate multiple values in a field -->
     <!-- you can use .first and .last to make the first or 
          last joins in a list different. eg. set
 		join_name to ',' 
@@ -1540,7 +1541,7 @@ For more information see <a href="http://eprints.org/d/?keyword=MetaFields">Meta
     <epp:phrase id="lib/searchexpression:form_problem"><p>There is a problem with the form:</p></epp:phrase>
     <epp:phrase id="lib/searchexpression:results_for">Results for <epc:pin name="title"/></epp:phrase>
     <epp:phrase id="lib/searchexpression:results">Displaying results <epc:pin name="from"/> to <epc:pin name="to"/> of <epc:pin name="n"/>.</epp:phrase>
-	<epp:phrase id="lib/searchexpression:results_page_size">Show <epc:pin name="n_10"/>, <epc:pin name="n_25"/> or <epc:pin name="n_100"/> results per page.</epp:phrase>
+    <epp:phrase id="lib/searchexpression:results_page_size">Show <epc:pin name="n_10"/>, <epc:pin name="n_25"/> or <epc:pin name="n_100"/> results per page. <epc:pin name="n_all">Show All</epc:pin></epp:phrase>
     <epp:phrase id="lib/searchexpression:search_time">Search time: <epc:pin name="searchtime"/>s.</epp:phrase>
     <epp:phrase id="lib/searchexpression:noresults">Search has no matches.</epp:phrase>
     <epp:phrase id="lib/searchexpression:export_section">
@@ -2495,7 +2496,7 @@ Titles and Help for the System Fields
     <epp:phrase id="user_fieldname_lang">Preferred Language</epp:phrase>
     <epp:phrase id="user_fieldhelp_lang">Your preferred language. Where possible information will be mailed in this language.</epp:phrase>
     <epp:phrase id="user_fieldname_roles">Roles</epp:phrase>
-    <epp:phrase id="user_fieldhelp_roles">This field allows an administrator to assign roles to a user. It may also be used to assign (and remove) individual privileges by prefixing the priv string with plus (+) or minus (-).</epp:phrase>
+    <epp:phrase id="user_fieldhelp_roles">This field allows an administrator to assign roles to a user. It may also be used to assign (and remove) individual privileges by prefixing the priv string with plus (+) or minus (-). <a href="http://wiki.eprints.org/w/User_roles.pl">More info.</a></epp:phrase>
 
 	<epp:phrase id="user_fieldname_openid_identifier">OpenID</epp:phrase>
 	<epp:phrase id="user_fieldhelp_openid_identifier">This must be a valid OpenID endpoint e.g. https://www.google.com/accounts/o8/id</epp:phrase>
@@ -2558,7 +2559,7 @@ Titles and Help for the System Fields
     <epp:phrase id="subject_fieldname_parents">Subject Parents Subject(s)</epp:phrase>
     <epp:phrase id="subject_fieldname_depositable">Depositable</epp:phrase>
     <epp:phrase id="subject_fieldhelp_depositable">Can users add items to this subject?</epp:phrase>
-    <epp:phrase id="subject_radio_depositable"><label><epc:pin name="true"/>Yes, users can add items to this subject.</label><br/><label><epc:pin name="false"/>No. (In which case it should probably have some children.</label></epp:phrase>
+    <epp:phrase id="subject_radio_depositable"><label><epc:pin name="true"/>Yes, users can add items to this subject.</label><br/><label><epc:pin name="false"/>No. (In which case it should probably have some children.)</label></epp:phrase>
     <epp:phrase id="subject_fieldname_subjectid">Subject ID String</epp:phrase>
     <epp:phrase id="subject_fieldhelp_subjectid">This is the internal key for this subject. It is used in the database and to generate the "views" filenames. It should contain only a-z, 0-9 and dash "/"and underscore "_".</epp:phrase>
 
@@ -3888,6 +3889,7 @@ To create a blank EPM entire a new id in the input and click <epc:phrase ref="Pl
 	<epp:phrase id="document_typename_application/vnd.ms-powerpoint">Microsoft PowerPoint</epp:phrase>
 	<epp:phrase id="document_typename_application/vnd.ms-excel">Microsoft Excel</epp:phrase>
 	<epp:phrase id="document_typename_application/msword">Microsoft Word</epp:phrase>
+        <epp:phrase id="document_typename_application/vnd.openxmlformats-officedocument.wordprocessingml.document">XML Word Processing Document (DOCX)</epp:phrase>
 	<epp:phrase id="document_typename_image/jpeg">Image (JPEG)</epp:phrase>
 	<epp:phrase id="document_typename_image/jpg">Image (JPEG)</epp:phrase>
 	<epp:phrase id="document_typename_image/png">Image (PNG)</epp:phrase>
@@ -4016,5 +4018,8 @@ PY = 2006 and OG = (Cambridge)<br />
 	<epp:phrase id="Plugin/Import/Cerif_1_4:title">CERIF 1.4 XML</epp:phrase>
 
 	<epp:phrase id="Plugin/Screen:csrf_failure">Cross-Site Request Forgery (CSRF) check failed. Ensure you have cookies enabled and allowed for this site.</epp:phrase>
+
+    <epp:phrase id="summary_page:actions"><h3>Actions (login required)</h3></epp:phrase>
+    <epp:phrase id="summary_page:download">Download</epp:phrase>
 
 </epp:phrases>

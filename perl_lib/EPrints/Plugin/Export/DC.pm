@@ -166,7 +166,7 @@ sub convert_dataobj
 		#$format = "application/octet-stream" unless defined $format;
 		push @dcdata, [ "format", $format ];
 		push @dcdata, [ "language", $_->value("language") ] if $_->exists_and_set("language");
-		push @dcdata, [ "rights", $_->value("license") ] if $_->exists_and_set("language");
+		push @dcdata, [ "rights", $_->value("license") ] if $_->exists_and_set("license");
 		push @dcdata, [ "identifier", $_->get_url() ];
 	}
 
@@ -179,6 +179,8 @@ sub convert_dataobj
 	
 	# Probably a DOI
 	push @dcdata, $plugin->simple_value( $eprint, id_number => "relation" );
+	# .. not a default field but added by several IRs
+	push @dcdata, $plugin->simple_value( $eprint, doi => "relation" );
 
 	# If no documents, may still have an eprint-level language
 	push @dcdata, $plugin->simple_value( $eprint, language => "language" );
