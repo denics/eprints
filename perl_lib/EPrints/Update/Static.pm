@@ -104,12 +104,17 @@ sub update_auto_js
 {
 	my( $session, $target_dir, $static_dirs ) = @_;
 
+	my $debug = $session->get_noise > 3 ? 1 : 0;
+	
 	my @dirs = map { "$_/javascript/auto" } grep { defined } @$static_dirs;
+	
+	
 
 	update_auto(
 			"$target_dir/javascript/auto.js",
 			"js",
 			\@dirs,
+			{ debug => $debug },
 		);
 }
 
@@ -132,6 +137,10 @@ Prefix text to the output file.
 =item postfix
 
 Postfix text to the output file.
+
+=item debug
+
+Print debug information.
 
 =back
 
@@ -186,7 +195,11 @@ sub update_auto
 	{
 		my $path = $map{$fn};
 
-		print $fh "\n\n\n/* From: $path */\n\n";
+		if ( defined $opts->{debug} && $opts->{debug} ) {
+			print $fh "\n\n Debug: \n/* From: $path */\n\n";
+		} else {
+			print $fh "\n/*+$fn*/\n";
+		}
 		open(my $in, "<:raw", $path) or EPrints::abort( "Can't read from $path: $!" );
 		my $buffer = "";
 		while(read($in, $buffer, 4096))
