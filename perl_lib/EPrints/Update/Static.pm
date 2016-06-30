@@ -196,7 +196,7 @@ sub update_auto
 		my $path = $map{$fn};
 
 		if ( defined $opts->{debug} && $opts->{debug} ) {
-			print $fh "\n\n Debug: \n/* From: $path */\n\n";
+			print $fh "\n\n/* Debug: \n From: $path */\n\n";
 		} else {
 			print $fh "\n/*+$fn*/\n";
 		}
